@@ -4,7 +4,7 @@
 // Creates an LCD object. Parameters: (rs, enable, d4, d5, d6, d7)
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
-byte Heart[8] = {
+byte Song[8] = {
 0b00001,
 0b00011,
 0b00101,
@@ -23,15 +23,17 @@ void setup()
 	// Clears the LCD screen
 	lcd.clear();
   	// Print a message to the LCD.
-	lcd.print("when haces tus");
+	lcd.print("Dalas Review");
   
-  lcd.createChar(0, Heart);
+  	lcd.createChar(0, Song);
 
 	// set the cursor to column 0, line 1
 	// (note: line 1 is the second row, since counting begins with 0):
 	lcd.setCursor(0, 1);
 	// Print a message to the LCD.
-	lcd.print("momos en una lcd");
+	lcd.print("Mini..!!");
+	lcd.setCursor(10, 1);
+  	lcd.write(byte(8));
 }
 
 void loop() 
